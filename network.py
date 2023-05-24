@@ -1,6 +1,6 @@
 import subprocess
 
-
+#Саня чекируй
 def enable():
     powershell_commands = [
         "netsh advfirewall firewall set rule group=\"Обнаружение сети\" new enable=Yes",
