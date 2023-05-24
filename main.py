@@ -1,6 +1,14 @@
+import ctypes
+
 import createAdmin
 import init
 import network
+
+is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
+
+if not is_admin:
+    print("АЛЁ ДАЙ АДМИНА")
+    exit(1)
 
 actions = {
     1: createAdmin.createAdminUser,
